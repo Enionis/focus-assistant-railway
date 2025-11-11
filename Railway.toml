@@ -6,5 +6,4 @@ startCommand = "uvicorn bot.sync_api:app --host 0.0.0.0 --port $PORT"
 
 [variables]
 LOG_LEVEL = "INFO"
-
 SYNC_API_PORT = "$PORT"
