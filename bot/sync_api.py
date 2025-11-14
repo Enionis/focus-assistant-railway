@@ -173,7 +173,6 @@ async def analyze_task(req: AnalyzeTaskRequest):
         raw = await _call_lm(_build_prompt(req.description, req.deadline))
         content = raw["choices"][0]["message"]["content"]
 
-        # попытка распарсить JSON
         try:
             data = json.loads(content)
         except json.JSONDecodeError:
